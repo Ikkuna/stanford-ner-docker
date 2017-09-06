@@ -26,7 +26,7 @@ docker pull lawinsider/stanford-ner-docker
    alternatively, you can build an image from Dockerfile:
 
 ```bash
-docker build -t="lawinsider/stanford-ner-docker" github.com/lawinsider/stanford-ner-docker
+docker build -t="ikkuna/stanford-ner-docker" github.com/Ikkuna/stanford-ner-docker
 ```
 
 ## Usage

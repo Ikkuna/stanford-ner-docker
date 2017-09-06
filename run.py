@@ -23,7 +23,18 @@ INLINEXML_EPATTERN = re.compile(r'<([A-Z]+?)>(.+?)</\1>')
 
 def start_ner_server(parser, model):
   devnull = open('/dev/null', 'w')
-  return subprocess.Popen([
+  # return subprocess.Popen([
+  #   'java',
+  #   '-Xmx900m',
+  #   '-cp',
+  #   parser,
+  #   'edu.stanford.nlp.ie.NERServer',
+  #   '-loadClassifier',
+  #   model,
+  #   '-outputFormat',
+  #   'inlineXML'
+  # ], stdout=devnull, stderr=devnull)
+    return subprocess.Popen([
     'java',
     '-Xmx900m',
     '-cp',
