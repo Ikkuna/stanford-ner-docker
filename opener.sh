@@ -19,6 +19,10 @@ function start {
 	/bin/sh -c 'docker run -p 172.17.42.1:9007:9007 -ti ikkuna:opener kaf2json-server -p 9007' &
 }
 
+function build {
+	docker build -t ikkuna:opener .
+}
+
 function stop {
 	docker ps -a | awk '$2~/ikkuna:opener/ {print $1}' |xargs -r docker stop
 }
